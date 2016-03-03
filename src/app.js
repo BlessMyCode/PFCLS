@@ -17,6 +17,6 @@ export class App {
 	}
 	
 	goToHome(){
-	    this.router.navigate('homepage');
+	    this.router.navigate('home');
 	}
 }

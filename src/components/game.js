@@ -11,9 +11,9 @@ export class game {
 		this.disableState = 'disabled';
 		this.disableState_startBtn = '';
 		this.nbTurn = 3;
-		this.toursRestant = 3;
-		this.timeGame = 10;
-		this.tempsRestant = 10;
+		this.toursRestant = this.nbTurn;
+		this.timeGame = 3;
+		this.tempsRestant = this.timeGame;
 		this.scoreBoard = { joueur1: [], joueur2: [], score: {joueur1: 0, joueur2: 0, nul: 0}, winner: []};
 		this.currentPlayer = 'joueur1';
 		this.router = router;
@@ -56,7 +56,7 @@ export class game {
 	
 	goToHome(){
 		alert('Une erreur est survenue. Veuillez nous en excuser svp.');
-		this.router.navigate('homepage');
+		this.router.navigate('home');
 	}
 	
 	setPlayerChoice(choice){
