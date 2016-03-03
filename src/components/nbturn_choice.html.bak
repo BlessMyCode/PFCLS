@@ -1,0 +1,7 @@
+<template class="center-block w90">
+
+	<h3>Choisissez un nombre de partie</h3>
+	<section class="row w100" >
+		<button repeat.for="nbturn of nbTurns" class="btn btn-primary btn-lg w20" click.delegate="setNbTurn($index)" >${nbturn}</button>
+	</section>
+</template>

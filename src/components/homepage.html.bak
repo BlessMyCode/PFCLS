@@ -1,0 +1,8 @@
+<template class="center-block w90">
+	<h1 class="txtcenter">${title}</h1>
+
+	<nav class="center-block w400p15" >
+		<button class="btn btn-primary btn-lg btn-block" click.trigger="startGame()" >Jouer</button>
+		<button class="btn btn-primary btn-lg btn-block" click.trigger="showHelp" >Aide</button>
+	</nav>
+</template>

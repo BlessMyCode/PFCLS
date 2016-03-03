@@ -1,0 +1,21 @@
+<template class="center-block w90">
+	<section class="" >
+		<ul class="symboleList" >
+			<li class="clearfix">
+				<button class="btn btn-primary btn-lg" click.delegate="game.setPlayerChoice('pierre')" >Pierre</button>
+			</li>
+			<li class="clearfix">
+				<button class="btn btn-primary btn-lg pull-left" click.delegate="game.setPlayerChoice('feuille')" >Feuille</button>
+				<span class="absolute-center compteur">${game.tempsRestant}</span>
+				<button class="btn btn-primary btn-lg pull-right" click.delegate="game.setPlayerChoice('spock')" >Spock</button>
+			</li>
+			<li class="clearfix">
+				<button class="btn btn-primary btn-lg pull-left" click.delegate="game.setPlayerChoice('ciseaux')" >ciseaux</button>
+				<button class="btn btn-primary btn-lg pull-right" click.delegate="game.setPlayerChoice('lezard')" >L&eacute;zard</button>
+			</li>
+		</ul>
+		<div class="w100 btn btn-block btn-danger btn-start" click.delegate="startButtClick()">START</div>
+		<!-- <div class="gameLoader bg-warning"><button class='btn btn-danger btn-lg center-block'>START</button></div> -->
+	</section>
+	<section class="gameOverlay" ></section>
+</template>

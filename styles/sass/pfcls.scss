@@ -1,0 +1,168 @@
+
+.page-host{width: 95vw;}
+.absolute-center{
+	display: flex;
+	position: absolute;
+    left: calc(50% - 40px);
+    right: calc(50% - 40px);
+    top: calc(50% - 24px);
+    height: 80px;
+    width: 80px;
+    font-size: 3em;
+    border-radius: 60px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.hidden{display: none;}
+.full{
+	display: block;
+	width: 100%
+}
+
+.navPrincipale{
+	height: 55px;
+	width: 100%;
+}
+
+/* coup.html */
+BUTTON.btn.symbole{
+	position: relative;
+	border-radius: 100%;
+	height: 20vh;
+    width: 20vh;
+	
+}
+.symboleList {
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	
+	LI{
+		margin-bottom: 23px;
+	}
+	LI:first-child{
+		margin-bottom: -14px;
+		text-align: center;
+	}
+	LI:last-child{
+		padding: 0 1vh;
+		margin-bottom: 0;
+	}
+}
+/* Start Button */
+.btn-start{
+    box-shadow: inset 0px 0px 29px red, 0px 0px 12px red;
+	z-index: 12;    
+	position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+}
+/* Timer */
+.compteur{
+    box-shadow: inset 0px 0px 29px black;
+	z-index: 5;
+}
+/* tableau des scores */
+.gameInfo{
+	margin: 8px auto 25px auto;
+	height: 60px;
+}
+.gameInfo > DIV{
+	width: 30%;
+	border: 1px solid grey;
+	display: inline-block;
+}
+
+.gameLoader{
+	width: 100%;
+	height: 100%;
+	opacity: 0.75;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	
+}
+
+/* Symbole */
+.pierre{
+	background-image: url('/img/pierre.png') !important;
+	background-size: 80% auto;
+	background-repeat: no-repeat;
+	background-position: center 0px;
+}
+.feuille{
+	background-image: url('/img/feuille.png') !important;
+	background-size: 80% auto;
+	background-repeat: no-repeat;
+	background-position: center 0px;
+}
+.lezard{
+	background-image: url('/img/lezard.png') !important;
+	background-size: 80% auto;
+	background-repeat: no-repeat;
+	background-position: center 0px;
+}
+.ciseaux{
+	background-image: url('/img/ciseaux.png') !important;
+	background-size: 80% auto;
+	background-repeat: no-repeat;
+	background-position: center 0px;
+}
+.spock{
+	background-image: url('/img/spock.png') !important;
+	background-size: 80% auto;
+	background-repeat: no-repeat;
+	background-position: center 0px;
+}
+.btn.pierre:after{
+	content: "pierre" ;
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    width: 100%;
+}
+.btn.feuille:after{
+	content: "feuille";
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    width: 100%;
+}
+.btn.lezard:after{
+	content: "lezard";
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    width: 100%;
+}
+.btn.ciseaux:after{
+	content: "ciseaux";
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    width: 100%;
+}
+.btn.spock:after{
+	content: "spock";
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    width: 100%;
+}
+
+.showResult{
+	position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    /* height: 80vh; */
+    margin-bottom: 10vh;
+    background-color: aquamarine;
+    z-index: 6;
+    top: 20vh;
+}

@@ -1,0 +1,32 @@
+<template class="center-block w90">
+	<require from='components/coup' ></require>
+	
+	<header class="w100 txtcenter gameInfo" >
+		<div class="txtcenter bg-info" >
+			<h3 class="">Joueur 1</h3>
+			<div class="">${scoreBoard.joueur1.length}</div>
+		</div>
+		<div class="txtcenter" >
+			<h3 class="">Manches</h3>
+			<div class="">${toursRestant}</div>
+		</div>
+		<div class="txtcenter bg-danger" >
+			<h3 class="">Joueur 2</h3>
+			<div class="">${scoreBoard.joueur2.length}</div>
+	</header>
+	<!-- <div class="" >Nombre de tours restant: ${tempsRestant} sec</div> -->
+	<compose class="full" view-model='./coup' model.bind="gameVM"></compose>
+	<section class.bind="showResult_cls">
+		<h2 class="w100 txtcenter bannerWinner">${winnerTxt}</h2>
+		<div class="clearfix w100">
+			<div class="joueur1_pins pull-left" >
+				<button class.bind="lastChoice_j1" ></button>
+			</div>
+			<div class="absolute-center biggest">VS</div>
+			<div class="joueur2_pins pull-right" >
+				<button class.bind="lastChoice_j2" ></button>
+			</div>
+		</div>
+	</section>
+	
+</template>

@@ -1,0 +1,21 @@
+<template class="center-block w90">
+	<section class="" >
+		<ul class="symboleList" >
+			<li class="clearfix">
+				<button class="btn btn-primary btn-lg symbole pierre" disabled.bind="game.disableState" click.delegate="game.setPlayerChoice('pierre')" ></button>
+			</li>
+			<li class="clearfix">
+				<button class="btn btn-primary btn-lg pull-left symbole feuille" disabled.bind="game.disableState" click.delegate="game.setPlayerChoice('feuille')" ></button>
+				<span class="absolute-center compteur">${game.tempsRestant}</span>
+				<button class="btn btn-primary btn-lg pull-right symbole spock" disabled.bind="game.disableState" click.delegate="game.setPlayerChoice('spock')" ></button>
+			</li>
+			<li class="clearfix">
+				<button class="btn btn-primary btn-lg pull-left symbole ciseaux" disabled.bind="game.disableState" click.delegate="game.setPlayerChoice('ciseaux')" ></button>
+				<button class="btn btn-primary btn-lg pull-right symbole lezard" disabled.bind="game.disableState" click.delegate="game.setPlayerChoice('lezard')" ></button>
+			</li>
+		</ul>
+		<button class="w100 btn btn-block btn-danger btn-start" disabled.bind="game.disableState_startBtn" click.delegate="game.startButtClick()">${currentPlayer} START</button>
+		<!-- <div class="gameLoader bg-warning"><button class='btn btn-danger btn-lg center-block'>START</button></div> -->
+	</section>
+	<section class="gameOverlay" ></section>
+</template>
