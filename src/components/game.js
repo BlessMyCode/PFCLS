@@ -29,6 +29,10 @@ export class game {
 		console.log(params); 
 	}
 	
+	afficheBilanPartie(){
+	    
+	}
+	
 	startTimer(){
 		this.toogleStartButt(false);
 		this.toogleGameButt(true);
@@ -63,15 +67,19 @@ export class game {
 	}
 	
 	startButtClick() {
-		if ( this.showResult_cls !== 'hidden' ){
-			this.showResult_cls = 'hidden';
-		}
-		if( this.refTimeoutShowResult ){
-			clearInterval(this.refTimeoutShowResult);
-		}
-		if( this.currentPlayer === 'joueur1' )
-			this.startTurn();
-		this.startTimer();
+	    if( this.toursRestant > 0 ){
+            if ( this.showResult_cls !== 'hidden' ){
+                this.showResult_cls = 'hidden';
+            }
+            if( this.refTimeoutShowResult ){
+                clearInterval(this.refTimeoutShowResult);
+            }
+            if( this.currentPlayer === 'joueur1' )
+                this.startTurn();
+            this.startTimer();
+        }else{
+            this.afficheBilanPartie();
+        }
 	}
 	//	PHASE DE JEU
 	startTurn(){
@@ -155,7 +163,7 @@ export class game {
 			winnerTxt = "Le joueur 2 gagne";
 		}else if( winner === 0 ){
 			this.scoreBoard.score.nul++;
-			winnerTxt = "Egualit&eacut;";
+			winnerTxt = "Egualit&eacute;";
 		}
 		this.winnerTxt = winnerTxt;
 		
